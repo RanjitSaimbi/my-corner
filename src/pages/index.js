@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Layout from "../components/Layout"
+import "../components/Layout.css"
+import Main from "../components/Main"
+
 export default () => {
   return (
-    <>
-      Hello world!
-      <p>
-        <Link to="/blog">View Blog</Link>
-      </p>
-    </>
+    <div>
+      <Layout main={<Main />} />
+    </div>
   )
 }
