@@ -1,14 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "./Layout.css"
-import logo from "../../static/lion.png"
+import styles from "./Layout.module.css"
+
+import Logo from "../../static/lion.png"
+import Facebook from "../../static/facebook.svg"
+import Gatsby from "../../static/gatsby.svg"
+import Twitter from "../../static/twitter.svg"
 
 export default ({ main }) => {
   return (
-    <div className="wrapper">
+    <div className={styles.wrapper}>
       <Header />
-      <div className="page-main">{main}</div>
+      <div className={styles.pageMain}>{main}</div>
       <Footer />
     </div>
   )
@@ -16,13 +20,19 @@ export default ({ main }) => {
 
 const Header = () => {
   return (
-    <header className="page-header">
+    <header className={styles.pageHeader}>
       <nav>
-        <img className="logo" src={logo} />
+        {
+          <Link to="/">
+            {" "}
+            <img className={styles.logo} src={Logo} />
+          </Link>
+        }
+
         <ul>
-          <li>Home</li>
+          <li>{<Link to="/">Home</Link>}</li>
           <li>{<Link to="/blog">Blog</Link>}</li>
-          <li>About</li>
+          <li>{<Link to="/about">About</Link>}</li>
         </ul>
       </nav>
     </header>
@@ -30,5 +40,22 @@ const Header = () => {
 }
 
 const Footer = () => {
-  return <h1 className="page-footer">FOOTER</h1>
+  return (
+    <header className={styles.pageFooter}>
+      <nav>
+        <p>Ranjit's Corner</p>
+        <ul>
+          <li>
+            <img src={Facebook} />
+          </li>
+          <li>
+            <img src={Gatsby} />
+          </li>
+          <li>
+            <img src={Twitter} />
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }

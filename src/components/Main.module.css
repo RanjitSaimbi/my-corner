@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Playfair+Display");
 
-.main-wrapper {
+.mainWrapper {
   padding-top: 4rem;
   padding-bottom: 4rem;
   max-width: 48rem;
@@ -8,14 +8,14 @@
   margin-right: auto;
 }
 
-.main-header {
+.mainHeader {
   padding-bottom: 2rem;
   font-family: "Playfair Display";
   font-size: 2.2rem;
 }
 
 @media screen and (min-width: 550px) {
-  .main-header {
+  .mainHeader {
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-family: "Playfair Display";
@@ -23,6 +23,6 @@
   }
 }
 
-.main-body {
+.mainBody {
   font-size: 1.25rem;
 }

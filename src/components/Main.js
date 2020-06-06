@@ -1,12 +1,12 @@
 import React from "react"
 
-import "./Main.css"
+import styles from "./Main.module.css"
 
 export default () => {
   return (
-    <div className="main-wrapper">
-      <h1 className="main-header">Unordered List (ul)</h1>
-      <p className="main-body">
+    <div className={styles.mainWrapper}>
+      <h1 className={styles.mainHeader}>Unordered List (ul)</h1>
+      <p className={styles.mainBody}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

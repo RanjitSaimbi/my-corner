@@ -19,26 +19,22 @@ body {
   padding: 10px;
 }
 
-.page-header {
-  background: #ff8811;
-}
-
-.page-main {
+.pageMain {
   flex-grow: 1;
   background: #ff8811;
 }
 
-.page-footer {
+.pageHeader {
   background: #ff8811;
 }
 
-.page-header nav {
+.pageHeader nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.page-header ul {
+.pageHeader ul {
   display: flex;
   order: 1;
   width: 100%;
@@ -47,21 +43,53 @@ body {
 }
 
 @media screen and (min-width: 550px) {
-  .page-header ul {
+  .pageHeader ul {
     width: auto;
     margin-top: 0;
     padding: 1rem;
   }
-  .page-header nav {
+  .pageHeader nav {
     justify-content: space-between;
   }
 }
 
-.page-header ul li {
+.pageHeader ul li {
   display: inline-block;
   margin-right: 3em;
 }
 
 .logo {
   height: 4.5rem;
+}
+
+.pageFooter img {
+  color: black;
+  width: 1.25rem;
+}
+
+.pageFooter {
+  background: #ff8811;
+}
+
+.pageFooter nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pageFooter ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 0;
+  justify-content: center;
+}
+
+.pageFooter ul li {
+  display: inline-block;
+  margin-right: 3em;
+}
+
+.pageFooter p {
+  margin-bottom: 1em;
 }

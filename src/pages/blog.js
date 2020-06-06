@@ -3,7 +3,7 @@ import React from "react"
 import BlogRoll from "../components/BlogRoll"
 import Layout from "../components/Layout"
 
-import "../components/Main.css"
+import styles from "../components/Main.module.css"
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -11,10 +11,10 @@ export default class BlogIndexPage extends React.Component {
       <Layout
         main={
           <React.Fragment>
-            <div className="main-wrapper">
-              <h1 className="main-header">Posts</h1>
+            <div className={styles.mainWrapper}>
+              <h1 className={styles.mainHeader}>Posts</h1>
               <section>
-                <div className="main-body">
+                <div className={styles.mainBody}>
                   <p>
                     Yak Collective projects are collaborations and explorations
                     from the community. Latest projects:

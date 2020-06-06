@@ -2,47 +2,29 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
-import "./BlogRoll.css"
+import styles from "./BlogRoll.module.css"
 
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    console.log(posts)
     return (
-      <div className="blog-container">
+      <div className={styles.blogContainer}>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="blog-box" key={post.id}>
-              <div className="w-50">
-                <div className="description">BLOG POST</div>
-                <article
-                  className={`blog-list-item tile is-child box notification ${
-                    post.frontmatter.featuredpost ? "is-featured" : ""
-                  }`}
-                >
-                  <header>
-                    <p className="post-meta">
-                      <Link
-                        className="title has-text-primary is-size-4"
-                        to={post.frontmatter.path}
-                      >
-                        {post.frontmatter.title}
-                      </Link>
-                      <span> &bull; </span>
-                      <span className="subtitle is-size-5 is-block">
-                        {post.frontmatter.date}
-                      </span>
-                    </p>
-                  </header>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                  </p>
-                </article>
+            <Link className={styles.link} to={post.frontmatter.path}>
+              <div className={styles.blogBox} key={post.id}>
+                <div className={styles.w50}>
+                  <div className={styles.description}>BLOG POST</div>
+                  <h2 className={styles.title}>{post.frontmatter.title}</h2>
+                  <h3 className={styles.subTitle}>{post.excerpt}</h3>
+                  <span className={styles.published}>
+                    PUBLISHED: {post.frontmatter.date}
+                  </span>
+                </div>
+                <div className={styles.panel}></div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     )
